@@ -5,46 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bryan Lloyd A. Blanco Portfolio</title>
-  
 
-  <!-- Favicon (optional) -->
   <link rel="icon" type="image/png" href="favicon.png" />
-
-  <!-- External CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css" />
 
-  <!-- JS -->
+  <style>
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #0a0a0a;
+      z-index: 999;
+      padding: 14px 30px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #a00;
+    }
 
+    nav .nav-brand {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #bbb;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav ul li a:hover {
+      color: #ff3333;
+    }
+
+    body {
+      padding-top: 52px;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        gap: 10px;
+      }
+      nav ul li a {
+        font-size: 11px;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#home" class="nav-brand">Bryan Lloyd</a>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#aboutme">About</a></li>
+      <li><a href="#My-Projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- HERO SECTION -->
   <div class="container hero" id="home">
     <div class="lest-side">
       <div class="btn-group">
         <button class="btn1" onclick="location.href='#aboutme'">About Me</button>
-        <button class="btn" onclick="location.href='#projects'">My Projects</button>
-        <button class="btn3" onclick="location.href='#contact'">Contact</button>
+        <button class="btn" onclick="location.href='#My-Projects'">My Projects</button>
+        <button class="btn3" onclick="location.href='#Contact'">Contact</button>
       </div>
     </div>
     
     <div class="right-side">
       <div class="txt-group">
         <h1 id="name">BRYAN LLOYD A. BLANCO</h1>
-        <p id="text">2nd Year Computer Engineer</p>
-        
+        <p id="text">2nd Year Computer Engineering Student</p>
       </div>
     </div>
   </div>
 
   <!-- ABOUT ME SECTION -->
-
   <section class="about-section" id="aboutme">
     <div class="about">
       <h1>About Me</h1>
       <hr>
       <p>
-        I’m a 2nd Year Bachelor of Science in Computer Engineering student at Batangas State University.
+        I'm a 2nd Year Bachelor of Science in Computer Engineering student at Batangas State University.
         Passionate about technology, innovation, and problem-solving. I enjoy designing, coding, and
         exploring emerging technologies that bridge hardware and software systems.
       </p>
@@ -54,7 +118,7 @@
     </div>
     <div class="btn4">
       <button class="btncv">Download CV</button>
-      <button class="btnvp">View Projects</button>
+      <button class="btnvp" onclick="location.href='#My-Projects'">View Projects</button>
     </div>
     <div class="bottom-row">
       <div class="Myprojects">
@@ -70,11 +134,11 @@
     </div>
   </section>
 
+  <!-- MY PROJECTS SECTION -->
   <section class="My-Projects" id="My-Projects">
     <div class="container">
       <h1 class="title">MY PROJECTS</h1>
       <div class="box">
-        <!-- SWIPER GOES INSIDE THE BOX -->
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="card-item swiper-slide">
@@ -84,7 +148,7 @@
             </div>
 
             <div class="card-item swiper-slide">
-              <img src="img/p2.jpg" alt="P1" class="image1">
+              <img src="img/p2.jpg" alt="P2" class="image1">
               <h2 class="P1">Project 2</h2>
               <p class="description">CAST: Basic Anti Phishing Tool</p>
             </div>
@@ -96,19 +160,19 @@
             </div>
 
             <div class="card-item swiper-slide">
-              <img src="img/p4.jpg" alt="P1" class="image1">
+              <img src="img/p4.jpg" alt="P4" class="image1">
               <h2 class="P1">Project 4</h2>
               <p class="description">Smart Waste Management</p>
             </div>
             
             <div class="card-item swiper-slide">
-              <img src="img/1.jpg" alt="P1" class="image1">
-              <h2 class="P1">Project 5</h2>
-              <p class="description">Project Title</p>
+              <img src="img/click.jpg" alt="Click To Eat" class="image1">
+              <h2 class="P1">Click To Eat</h2>
+              <p class="description">Click To Eat is a web based food ordering system used in school</p>
             </div>
 
             <div class="card-item swiper-slide">
-              <img src="img/1.jpg" alt="P1" class="image1">
+              <img src="img/1.jpg" alt="P6" class="image1">
               <h2 class="P1">Project 6</h2>
               <p class="description">Project Title</p>
             </div>
@@ -120,207 +184,206 @@
         </div>
       </div>
     </div>
-</section>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
   <!-- SKILLS SECTION -->
-<section class="skills-section" id="skills">
-  <div class="skills-container">
-    <h1 class="section-title">MY SKILLS</h1>
-    <p class="section-subtitle">Technical expertise and creative abilities</p>
-    
-    <div class="skills-grid">
-      <!-- Technical Skills -->
-      <div class="skill-category">
-        <h3><span class="skill-icon">💻</span> Technical Skills</h3>
-        <ul class="skill-list">
-          <li class="skill-item">
-            <div class="skill-name">
-              <span>Python</span>
-              <span>55%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="width: 55%"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-name">
-              <span>C Programming</span>
-              <span>20%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="width: 20%"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-name">
-              <span>HTML/CSS</span>
-              <span>30%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="width: 30%"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-name">
-              <span>JavaScript</span>
-              <span>20%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="width: 20%"></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Hardware/Engineering Skills -->
-      <div class="skill-category">
-        <h3><span class="skill-icon">⚙️</span> Engineering Skills</h3>
-        <ul class="skill-list">
-          <li class="skill-item">
-            <div class="skill-name">
-              <span>Circuit Design</span>
-              <span>20%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="width: 20%"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-name">
-              <span>Embedded Systems</span>
-              <span>20%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="width: 20%"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-name">
-              <span>Arduino/Microcontrollers</span>
-              <span>55%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="width: 55%"></div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-name">
-              <span>Logic &  Design</span>
-              <span>60%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="width: 60%"></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-  </div>
-</section>
-
-<!-- EDUCATION SECTION -->
-<section class="education-section" id="education">
-  <div class="education-container">
-    <h1 class="section-title">EDUCATION & EXPERIENCE</h1>
-    <p class="section-subtitle">My academic journey and professional development</p>
-    
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2024 - Present</div>
-          <h3 class="timeline-title">Bachelor of Science in Computer Engineering</h3>
-          <div class="timeline-subtitle">Batangas State University</div>
-          <p class="timeline-description">
-            Currently in 2nd year, focusing on computer systems, programming, 
-            circuit design, and embedded systems. Maintaining strong academic 
-            performance while actively participating in engineering projects.
-          </p>
+  <section class="skills-section" id="skills">
+    <div class="skills-container">
+      <h1 class="section-title">MY SKILLS</h1>
+      <p class="section-subtitle">Technical expertise and creative abilities</p>
+      
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><span class="skill-icon"></span> Technical Skills</h3>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Python</span>
+                <span>55%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 55%"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>C Programming</span>
+                <span>20%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 20%"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>HTML/CSS</span>
+                <span>30%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 30%"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>JavaScript</span>
+                <span>20%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 20%"></div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="timeline-dot"></div>
-      </div>
 
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2022 - 2024</div>
-          <h3 class="timeline-title">Senior High School - STEM</h3>
-          <div class="timeline-subtitle">Alangilan Seniot High School</div>
-          <p class="timeline-description">
-            Completed STEM strand with focus on Mathematics, Science, Technology, and 
-            Engineering. Developed better critical thinking and basic programming.
-          </p>
+        <div class="skill-category">
+          <h3><span class="skill-icon"></span> Engineering Skills</h3>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Circuit Design</span>
+                <span>20%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 20%"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Embedded Systems</span>
+                <span>20%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 20%"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Arduino/Microcontrollers</span>
+                <span>55%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 55%"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Logic & Design</span>
+                <span>60%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 60%"></div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="timeline-dot"></div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2024</div>
-          <h3 class="timeline-title">Student Intern</h3>
-          <div class="timeline-subtitle">Balete Relocation Sitte ELementary School</div>
-          <p class="timeline-description">
-              Gained experience on becoming an assitant for teacher and for taking care of students.
-          </p>
-        </div>
-        <div class="timeline-dot"></div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2018-2022</div>
-          <h3 class="timeline-title">Junior High School</h3>
-          <div class="timeline-subtitle">Casa del Bambino Emmanuel Montesorri</div>
-          <p class="timeline-description">
-            Taught the basic leadership and the proper nerttiquettes.
-          </p>
-        </div>
-        <div class="timeline-dot"></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CERTIFICATIONS & AWARDS -->
-<section class="awards-section" id="awards">
-  <div class="skills-container">
-    <h1 class="section-title">CERTIFICATIONS & AWARDS</h1>
-    <p class="section-subtitle">Recognitions and achievements</p>
-    
-    <div class="awards-grid">
-      <div class="award-card">
-        <div class="award-icon"><img src="img/certificate.png" class="awardpic"></div>
-        <h3 class="award-title">Champion</h3>
-        <p class="award-issuer">CICS Interskwela</p>
-        <p class="award-date">Academic Year 2024-2025</p>
-      </div>
-      <div class="award-card">
-        <div class="award-icon"><img src="img/cert2.png" class="awardpic"></div>
-        <h3 class="award-title">Participant</h3>
-        <p class="award-issuer">𝐓𝐄𝐂𝐇𝐂𝐄𝐋𝐋𝐄𝐍𝐂𝐄 𝐕𝟐.𝟎: 𝐅𝐫𝐨𝐦 𝐂𝐨𝐧𝐬𝐭𝐞𝐥𝐥𝐚𝐭𝐢𝐨𝐧𝐬 𝐭𝐨 𝐂𝐫𝐞𝐚𝐭𝐢𝐨𝐧𝐬</p>
-        <p class="award-date">Academic Year 2024-2025</p>
-      </div>
-      <div class="award-card">
-        <div class="award-icon"><img src="img/cert3.png" class="awardpic"></div>
-        <h3 class="award-title">Participant</h3>
-        <p class="award-issuer">𝐓𝐄𝐂𝐇𝐂𝐄𝐋𝐋𝐄𝐍𝐂𝐄 𝐕𝟐.𝟎: 𝐅𝐫𝐨𝐦 𝐂𝐨𝐧𝐬𝐭𝐞𝐥𝐥𝐚𝐭𝐢𝐨𝐧𝐬 𝐭𝐨 𝐂𝐫𝐞𝐚𝐭𝐢𝐨𝐧𝐬</p>
-        <p class="award-date">Academic Year 2024-2025</p>
+  <!-- EDUCATION SECTION -->
+  <section class="education-section" id="education">
+    <div class="education-container">
+      <h1 class="section-title">EDUCATION & EXPERIENCE</h1>
+      <p class="section-subtitle">My academic journey and professional development</p>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-year">2024 - Present</div>
+            <h3 class="timeline-title">Bachelor of Science in Computer Engineering</h3>
+            <div class="timeline-subtitle">Batangas State University</div>
+            <p class="timeline-description">
+              Currently in 2nd year, focusing on computer systems, programming, 
+              circuit design, and embedded systems. Maintaining strong academic 
+              performance while actively participating in engineering projects.
+            </p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-year">2022 - 2024</div>
+            <h3 class="timeline-title">Senior High School - STEM</h3>
+            <div class="timeline-subtitle">Alangilan Senior High School</div>
+            <p class="timeline-description">
+              Completed STEM strand with focus on Mathematics, Science, Technology, and 
+              Engineering. Developed better critical thinking and basic programming.
+            </p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-year">2024</div>
+            <h3 class="timeline-title">Student Intern</h3>
+            <div class="timeline-subtitle">Balete Relocation Site Elementary School</div>
+            <p class="timeline-description">
+              Gained experience on becoming an assistant for teacher and for taking care of students.
+            </p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-year">2018 - 2022</div>
+            <h3 class="timeline-title">Junior High School</h3>
+            <div class="timeline-subtitle">Casa del Bambino Emmanuel Montessori</div>
+            <p class="timeline-description">
+              Taught the basic leadership and the proper netiquettes.
+            </p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- CERTIFICATIONS & AWARDS -->
+  <section class="awards-section" id="awards">
+    <div class="skills-container">
+      <h1 class="section-title">CERTIFICATIONS & AWARDS</h1>
+      <p class="section-subtitle">Recognitions and achievements</p>
+      
+      <div class="awards-grid">
+        <div class="award-card">
+          <div class="award-icon"><img src="img/certificate.png" class="awardpic"></div>
+          <h3 class="award-title">Champion</h3>
+          <p class="award-issuer">CICS Interskwela</p>
+          <p class="award-date">Academic Year 2024-2025</p>
+        </div>
+        <div class="award-card">
+          <div class="award-icon"><img src="img/cert2.png" class="awardpic"></div>
+          <h3 class="award-title">Participant</h3>
+          <p class="award-issuer">𝐓𝐄𝐂𝐇𝐂𝐄𝐋𝐋𝐄𝐍𝐂𝐄 𝐕𝟐.𝟎: 𝐅𝐫𝐨𝐦 𝐂𝐨𝐧𝐬𝐭𝐞𝐥𝐥𝐚𝐭𝐢𝐨𝐧𝐬 𝐭𝐨 𝐂𝐫𝐞𝐚𝐭𝐢𝐨𝐧𝐬</p>
+          <p class="award-date">Academic Year 2024-2025</p>
+        </div>
+        <div class="award-card">
+          <div class="award-icon"><img src="img/cert3.png" class="awardpic"></div>
+          <h3 class="award-title">Participant</h3>
+          <p class="award-issuer">𝐓𝐄𝐂𝐇𝐂𝐄𝐋𝐋𝐄𝐍𝐂𝐄 𝐕𝟐.𝟎: 𝐅𝐫𝐨𝐦 𝐂𝐨𝐧𝐬𝐭𝐞𝐥𝐥𝐚𝐭𝐢𝐨𝐧𝐬 𝐭𝐨 𝐂𝐫𝐞𝐚𝐭𝐢𝐨𝐧𝐬</p>
+          <p class="award-date">Academic Year 2024-2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
   <section class="Contact" id="Contact">
-  <div class="contact-container">
-    <h1 class="contact-title">CONTACT ME</h1>
-    
-    <div class="contact-content">
-      <!-- Left Side: Contact Form -->
+    <div class="contact-container">
+      <h1 class="contact-title">CONTACT ME</h1>
+      
+      <div class="contact-content">
         <div class="contact-form">
           <h2>Send me a message</h2>
           <form action="https://formspree.io/f/xrbyavlw" method="POST">
             <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
+              <label for="fullname">Name</label>
+              <input type="text" id="fullname" name="name" required>
             </div>
             
             <div class="form-group">
@@ -342,12 +405,11 @@
           </form>
         </div>
         
-        <!-- Right Side: Contact Info -->
         <div class="contact-info">
           <h2>Get in touch</h2>
           
           <div class="info-item">
-            <div class="info-icon">📧</div>
+            <div class="info-icon"></div>
             <div class="info-text">
               <h3>Email</h3>
               <a href="mailto:bryanlloydblanco30@gmail.com">bryanlloydblanco30@gmail.com</a>
@@ -355,7 +417,7 @@
           </div>
           
           <div class="info-item">
-            <div class="info-icon">📱</div>
+            <div class="info-icon"></div>
             <div class="info-text">
               <h3>Phone</h3>
               <a href="tel:+639563975208">+63 956 397 5208</a>
@@ -363,7 +425,7 @@
           </div>
           
           <div class="info-item">
-            <div class="info-icon">👤</div>
+            <div class="info-icon"></div>
             <div class="info-text">
               <h3>Facebook</h3>
               <a href="https://www.facebook.com/profile.php?id=61576723534688" target="_blank">Bryan Lloyd Blanco</a>
@@ -372,7 +434,7 @@
           
           <div class="social-links">
             <a href="https://www.facebook.com/profile.php?id=61576723534688" target="_blank" class="social-btn">Facebook</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-btn">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/bryan-lloyd-blanco-53a9483b2/" target="_blank" class="social-btn">LinkedIn</a>
             <a href="https://github.com/bryanlloydblanco30-blip" target="_blank" class="social-btn">GitHub</a>
           </div>
         </div>
